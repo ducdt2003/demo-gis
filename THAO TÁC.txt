@@ -1,0 +1,77 @@
+🛠️ 1. THAO TÁC HÀNG NGÀY & LÀM TASK
+
+* `git checkout -b <tên_nhánh>`
+* **Tác dụng:** Tạo và chuyển ngay sang nhánh feature/bugfix mới.
+
+
+* `git stash -u`
+* **Tác dụng:** Tạm cất code làm dở (gồm cả file mới) để chuyển nhánh gấp.
+
+
+* `git stash pop`
+* **Tác dụng:** Lấy lại code dở dang vừa cất để tiếp tục làm.
+
+
+* `git fetch origin`
+* **Tác dụng:** Cập nhật thông tin nhánh/commit mới nhất từ Server về.
+
+
+* `git rebase origin/dev`
+* **Tác dụng:** Kéo code dev mới nhất về nhánh mình (lịch sử thẳng đẹp).
+
+
+* `git cherry-pick <hash>`
+* **Tác dụng:** Bốc duy nhất 1 commit cụ thể từ nhánh khác về nhánh mình.
+
+
+🚨 2. CỨU NGUY & SỬA LỖI (FIX MISTAKES)
+
+* `git commit --amend --no-edit`
+* **Tác dụng:** Gộp thêm file/thay đổi mới vào commit gần nhất (không tạo commit mới).
+
+
+* `git commit --amend -m "message"`
+* **Tác dụng:** Đổi lại câu message của commit vừa tạo.
+
+
+* `git restore --staged .`
+* **Tác dụng:** Hủy git add toàn bộ file (đưa về trạng thái Unstaged).
+
+
+* `git restore .`
+* **Tác dụng:** Xóa sạch các thay đổi chưa commit trên file cũ.
+
+
+* `git clean -fd`
+* **Tác dụng:** Xóa thẳng tay các file/thư mục mới tạo chưa track (untracked).
+
+
+* `git reflog`
+* **Tác dụng:** Nhật ký thần chưởng - Xem lịch sử mọi thao tác để lấy lại code lỡ xóa.
+
+
+* `git reset --hard <hash>`
+* **Tác dụng:** Đưa toàn bộ project quay trở lại đúng thời điểm commit `<hash>`.
+
+
+
+3. SO SÁNH, KIỂM TRA & DỌN DẸP
+
+* `git log --oneline --graph --all`
+* **Tác dụng:** Xem lịch sử commit dạng sơ đồ cây siêu gọn.
+
+
+* `git blame <tên_file>`
+* **Tác dụng:** Soi chi tiết ai là người viết/sửa từng dòng code trong file.
+
+
+* `git diff dev..feature-abc`
+* **Tác dụng:** Xem toàn bộ sự khác biệt giữa nhánh mình và nhánh dev.
+
+
+* `git fetch -p`
+* **Tác dụng:** Đồng bộ và xóa các tracking branch đã bị xoá trên Server.
+
+
+* `git branch -d <tên_nhánh>`
+* **Tác dụng:** Xóa nhánh local sau khi đã merge xong task.
